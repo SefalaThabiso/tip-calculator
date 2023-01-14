@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="script.js" defer></script>
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="logo">
+        <img src="./images/logo.svg" alt="splitter logo" />
+      </div>
+      <div class="calculator">
+        <!-- Input container starts here-->
+        <div class="user__input__container">
+          <div class="input__section">
+            <label for="bill">Bill</label>
+
+            <div class="input__container">
+              <span><img src="./images/icon-dollar.svg" alt="" /></span>
+              <input type="text" data-bill />
+            </div>
+          </div>
+
+          <!-- this where people select a tip-->
+          <div class="tip__selector__section input__section">
+            <div class="input__section">Select Tip %</div>
+            <div class="tip__selector_grid" data-radio-elements>
+              <label class="tip__selector" for="tip1">
+                <input
+                  type="radio"
+                  name="tip"
+                  id="tip1"
+                  value=".5"
+                  data-radio
+                  required
+                />
+                <label>5%</label>
+              </label>
+              <label class="tip__selector" for="tip2">
+                <input
+                  type="radio"
+                  name="tip"
+                  id="tip2"
+                  value=".10"
+                  data-radio
+                />
+                10%
+              </label>
+              <label class="tip__selector" for="tip3">
+                <input
+                  type="radio"
+                  name="tip"
+                  id="tip3"
+                  value=".15"
+                  checked="checked"
+                  data-radio
+                />
+                15%
+              </label>
+
+              <label for="tip4" class="tip__selector">
+                <input
+                  type="radio"
+                  name="tip"
+                  id="tip4"
+                  value=".25"
+                  data-radio
+                />
+                25%
+              </label>
+
+              <label for="tip5" class="tip__selector">
+                <input
+                  type="radio"
+                  name="tip"
+                  id="tip5"
+                  value=".5"
+                  data-radio
+                />
+                50%
+              </label>
+              <div class="tip-input__box">
+                <input
+                  type="radio"
+                  name="tip"
+                  id="tip6"
+                  value=".5"
+                  data-input-radio
+                />
+
+                <input type="text" class="custome-tip" data-Input-tip />
+              </div>
+            </div>
+          </div>
+
+          <!-- Choose number of people-->
+          <div class="input__section">
+            <label for="bill">Number of People</label>
+            <div class="input__container">
+              <span><img src="./images/icon-person.svg" alt="" /></span>
+              <input type="text" data-number-of-people required />
+            </div>
+          </div>
+        </div>
+
+        <!-- Input container ends here-->
+
+        <!-- Results container starts here-->
+        <div class="results-area">
+          <div class="output tip-amount">
+            <div class="title">
+              <p>Tip Amount</p>
+              <span>/ person</span>
+            </div>
+            <div class="amount" data-individual-tip>$0.00</div>
+          </div>
+          <div class="output total">
+            <div class="title">
+              <p>Total</p>
+              <span>/ person</span>
+            </div>
+            <div class="amount" data-amount-output>$0.00</div>
+          </div>
+          <button class="button" id="reset">Reset</button>
+        </div>
+        <!-- Results container ends here-->
+      </div>
+    </main>
+  </body>
+</html>
